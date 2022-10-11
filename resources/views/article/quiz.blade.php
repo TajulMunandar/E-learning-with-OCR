@@ -14,18 +14,18 @@
 <article class="p-5">
     <h1 class="fw-bold">Quiz</h1>
     <p>Pengimpor buah-buahan ke Indonesia. Indonesia merupakan negara agraris yang memiliki berbagai kekayaan alam termasuk beragam jenis buah-buahan. Namun demikian, data dari BPS menunjukkan bahwa setiap tahun, Indonesia mengimpor berbagai jenis buah-buahan dari luar negeri dengan volume yang fantastis. Beberapa negara utama yang menjadi pengimpor 
-        buah-buahan ke Indonesia diantaranya adalah Tiongkok dan Amerika Serikat (Tabel 2.5).</p>
-        <p class="text-center fs-5"><b>Tabel 2.5</b>  Volume (dalam satuan 1000 Kg) Impor Buah-buahan di Indonesia menurut Negara Asal Utama pada Tahun 2010-2020</p>
-       
+        buah-buahan ke Indonesia diantaranya adalah Tiongkok dan Amerika Serikat (Tabel 1.5).</p>
+
         <img src="img/data-latihan.png" alt="" class="d-block m-auto mt-4 mb-5">
     
-         <i class=" fs-5">Data ini diakses di <a href="https://www.bps.go.id/statictable/2019/02/14/2010/impor-buah-buahan-menurut-negara-asal-utama-2010-2019.html"> bps.go.id</a></i>
+        <p class="text-center fs-5"><b>Tabel 2.5</b>  Volume (dalam satuan 1000 Kg) Impor Buah-buahan di Indonesia menurut Negara Asal Utama pada Tahun 2010-2020</p>
+        <i class=" fs-5">Data ini diakses di <a href="https://www.bps.go.id/statictable/2019/02/14/2010/impor-buah-buahan-menurut-negara-asal-utama-2010-2019.html"> bps.go.id</a></i>
         
     <div class="soal">
         <h2 class="mt-4">1.Menampilkan Data Presentase.</h2>
-        <p>Tabel berikut menampilkan data volume impor buah-buahan menurut negara asal utama khusus pada Tahun 2020.
+        <p>Tabel 1.6 menampilkan data volume impor buah-buahan menurut negara asal utama khusus pada Tahun 2020.
             Dengan menggunakan kalkulator atau MS Excel, hitunglah nilai persentase volume impor untuk setiap negara
-            dan lengkapi kolom persentase pada Tabel berikut dengan nilai persentase yang benar (Gunakan satu digit angka setelah koma).</p>
+            dan lengkapi kolom persentase pada Tabel 1.6 dengan nilai persentase yang benar (Gunakan satu digit angka setelah koma).</p>
 
         <table class="table">
             <thead class=" mt-5">
@@ -118,16 +118,17 @@
         <p>Data persentase volume impor buah-buahan pada Tahun 2020 ditampilkan dalam tiga grafik berikut.
             Grafik yang mana yang menurutmu paling tepat untuk menampilkan data tersebut? Klik salah satu grafik.</p>
         <div class="row">
-            <div class="col btn" id="benar"><img src="img/quiz/diagrambatang_imp06.png" style=" width: 300px;" alt=""></div>
-            <div class="col btn" id="salah"><img src="img/quiz/diagrampie_impor04.png" style=" width: 300px;" alt=""></div>
-            <div class="col btn" id="salah"><img src="img/quiz/diagramplot_impor03.png" style=" width: 300px;" alt=""></div>
+            <div class="col btn" onclick="benar()" id="benar"><img src="img/quiz/diagrambatang_imp06.png" style=" width: 250px;" alt=""></div>
+            <div class="col btn" onclick="salah()" id="salah"><img src="img/quiz/diagrampie_impor04.png" style=" width: 300px;" alt=""></div>
+            <div class="col btn" onclick="salah2()" id="salah"><img src="img/quiz/diagramplot_impor03.png" style=" width: 290px;" alt=""></div>
         </div>
     </div>
 
-    <div class="soal mt-3">
+    < class="soal mt-3">
         <h2 class="mt-4">3.Membandingkan Grafik Data Tahun 2010-2020.</h2>
-        <p>Tabel berikut menampilkan data total volume impor buah-buahan menurut negara asal utama pada tahun 2010 sampai dengan Tahun 2020.</p>
-         <table class="table">
+        <p>Tabel 1.7 menampilkan data total volume impor buah-buahan menurut negara asal utama pada tahun 2010 sampai dengan Tahun 2020.</p>
+        <p class="text-center">Tabel 1.7 Data total volume impor buah-buahan menurut negara asal utama pada tahun 2010 s.d 2020</p>
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Tahun</th>
@@ -164,9 +165,9 @@
             untuk menampilkan data total volume impor
             buah-buahan menurut negara asal utama pada tahun 2010 sampai dengan Tahun 2020? Klik salah satu grafik berikut.</p>
         <div class="row">
-            <div class="col btn " id="salah"><img src="img/quiz/diagrambatang_tah01.png" style=" width: 320px;" alt=""></div>
-            <div class="col btn " id="benar"><img src="img/quiz/diagramgaris_tahun01.png" style=" width: 320px;" alt=""></div>
-            <div class="col btn " id="salah1"><img src="img/quiz/diagrampie_tahun01.png" style=" width: 300px;" alt=""></div>
+            <div class="col btn " onclick="salah3()" id="salah"><img src="img/quiz/diagrambatang_tah01.png" style=" width: 320px;" alt=""></div>
+            <div class="col btn " onclick="benar()" id="benar"><img src="img/quiz/diagramgaris_tahun01.png" style=" width: 320px;" alt=""></div>
+            <div class="col btn " onclick="salah4()" id="salah"><img src="img/quiz/diagrampie_tahun01.png" style=" width: 300px;" alt=""></div>
         </div>
     </section>
 </article>
@@ -201,30 +202,51 @@
 </article>
 
 <script>
-    const buttons = document.querySelectorAll('#salah');
-    for (const button of buttons) {
-        button.addEventListener('click', function() {
-            Swal.fire({
-                title: 'Kurang Sesuai!!! ',
-                text: 'Fluktuasi data Seiring Waktu tidak sesuai dengan Diagram Batang',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            })
+   
+   function salah() {
+        Swal.fire({
+            title: 'Kurang Sesuai !!! ',
+            text: 'Jumlah Kategori Terlalu Banyak',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        })
+    }
+   function salah2() {
+        Swal.fire({
+            title: 'Tidak Sesuai!!! ',
+            text: 'Karena Yang Ingin Ditampilkan Bukan Perubahan Data Seiring Waktu',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        })
+    }
+   function salah3() {
+        Swal.fire({
+            title: 'Kurang Sesuai !!! ',
+            text: 'Fluktuasi Data Seiring Waktu Tidak Begitu Terlihat Dengan Diagram Batang',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        })
+    }
+   function salah4() {
+    Swal.fire({
+            title: 'Kurang Sesuai !!! ',
+            text: 'Fluktuasi Data Seiring Waktu Tidak Begitu Terlihat Dengan Diagram Batang',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        })
+    }
+   
+    function benar() {
+        Swal.fire({
+            title: 'Benar!!! ',
+            text: 'Stemplot akan sulit digunakan untuk data berjumlah besar karena setiap nilai data ditampilkan dalam grafik.',
+            icon: 'success',
+            confirmButtonText: 'OK'
         })
     }
 
-    const buttons = document.querySelectorId('salah1');
-    for (const button of buttons) {
-        button.addEventListener('click', function() {
-            Swal.fire({
-                title: 'Kurang Sesuai!!! ',
-                text: 'Fluktuasi data Seiring Waktu tidak sesuai dengan Diagram Lingkaran',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            })
-        })
 
-    }
+    
 
     const buttonb = document.querySelectorAll('#benar');
     for (const button of buttonb) {
